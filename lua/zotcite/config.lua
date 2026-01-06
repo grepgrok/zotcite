@@ -298,6 +298,7 @@ M.init = function()
     )
     if config.conceallevel >= 0 then vim.o.conceallevel = config.conceallevel end
     vim.treesitter.start(bnr)
+    vim.ob[bnr].syntax = "ON"
     vim.api.nvim_create_autocmd(
         "InsertLeave",
         { buffer = bnr, callback = require("zotcite.hl").citations }
