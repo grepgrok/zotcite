@@ -179,7 +179,7 @@ local global_init = function()
     vim.env.RmdFile = vim.fn.expand("%:p")
 
     vim.api.nvim_create_user_command(
-        "Zseek",
+        "Zseekhi",
         function(tbl)
             require("zotcite.seek").refs(tbl.args, require("zotcite.seek").print)
         end,
